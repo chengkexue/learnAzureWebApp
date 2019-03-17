@@ -10,6 +10,17 @@ namespace learnAzureWebApp.Controllers
     {
         public ActionResult Index()
         {
+            //AzureSQLHelp.execute("SELECT [AddressID],[AddressLine1],[AddressLine2],[City],[StateProvinceID],[PostalCode],[SpatialLocation],[rowguid],[ModifiedDate] FROM [Person].[Address]");
+            AzureAdventureWorks2012Entities db = new AzureAdventureWorks2012Entities();
+            List<Product> products = db.Product.ToList();
+            int i = 0;
+            foreach(Product product in products)
+            {
+                if (i >= 5) break;
+
+                Response.Write("product id:" + product.ProductID + ", product name:" + product.Name + "<br>");
+                i++;
+            }
             return View();
         }
 
