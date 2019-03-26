@@ -6,9 +6,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace learnAzureWebApp.SQLHelp
+namespace learnAzureWebApp.Helper
 {
-    public class AzureSQLHelp
+    public class AzureSQLHelper
     {
         static SqlConnection conn;
         static SqlCommand cmd;
