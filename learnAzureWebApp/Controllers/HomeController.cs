@@ -61,14 +61,19 @@ namespace learnAzureWebApp.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            try
-            {
-                Convert.ToInt32("aaa");
-            }
-            catch (Exception ex)
-            {
-                LogHelper.WriteException(string.Format("当前的时间{0}", DateTime.Now.ToString()), ex);
-            }
+            //try
+            //{
+            //    Convert.ToInt32("aaa");
+            //}
+            //catch (Exception ex)
+            //{
+            //    LogHelper.WriteException(string.Format("当前的时间{0}", DateTime.Now.ToString()), ex);
+            //}
+
+            int a = 1;
+            int b = 0;
+
+            Convert.ToInt32(a / b);
 
             return View();
         }
